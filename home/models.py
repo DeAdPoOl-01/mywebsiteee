@@ -26,4 +26,4 @@ class Setting(models.Model):
     contact = models.CharField(max_length=250)
 
     def __str__(self):
-        return self.title
+        return self.title 
