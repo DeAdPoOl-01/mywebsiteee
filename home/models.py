@@ -7,7 +7,7 @@ from django.db import models
 
 # Create your models here.
 
-class Settings(models.Model):
+class Setting(models.Model):
     title = models.CharField(max_length=100)
     keywords = models.CharField(max_length=255)
     description = models.TextField(max_length=500)
@@ -21,7 +21,7 @@ class Settings(models.Model):
     youtube = models.URLField(blank=True, null=True)
     Istagramm = models.URLField(blank=True, null=True)
     Facebook = models.URLField(blank=True, null=True)
-    icon = models.CharField(max_length=200)
+    icon = models.CharField(blank=True, upload_to='images/')
     aboutus = models.CharField(max_length=250)
     contact = models.CharField(max_length=250)
 

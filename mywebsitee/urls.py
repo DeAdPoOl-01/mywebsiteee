@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home import views as h_views
-from course import views as c_views
-
+from course import views as c_views, views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', h_views.index),
     path('', h_views.index),
     path('course/', c_views.index),
+    path('about/', views.about, name = 'about'),
+    path('contact/', views.contact, name = 'contact'),
+    path('setting/', views.setting.index)
 ]
