@@ -5,8 +5,11 @@ def index(request):
     # return HttpResponse('Hello Django!')
     return render(request,'index.html')
 
-def index(request):
-    return HttpResponse('About us')
+def about(request):
+    # return HttpResponse('About us')
+    return render(request, 'about.html')
+
 
 def contact(request):
-    return HttpResponse('Contact page')
+    # return HttpResponse('Contact page')
+    return render(request, 'contact.html')

@@ -22,8 +22,8 @@ class Setting(models.Model):
     Istagramm = models.URLField(blank=True, null=True)
     Facebook = models.URLField(blank=True, null=True)
     icon = models.CharField(blank=True, upload_to='images/')
-    aboutus = models.CharField(max_length=250)
-    contact = models.CharField(max_length=250)
+    aboutus = models.CharField(blank=True, max_length=250)
+    contact = models.CharField(blank=True, max_length=250)
 
     def __str__(self):
         return self.title 
